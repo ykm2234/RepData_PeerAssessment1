@@ -193,5 +193,5 @@ mean_steps_interval_weekend<-summarise(by_interval_weekend, mean(steps))
 ##make plots of mean steps for weekend and weekday
 par(mfcol=c(2,1))
 plot(mean_steps_interval_weekend, type="l", main="Average Daily Steps on weekends by time interval", ylab="Number of steps")
-plot(mean_steps_interval_weekday, type="l", main="Average Daily Steps on weekends by time interval", ylab="Number of steps")
+plot(mean_steps_interval_weekday, type="l", main="Average Daily Steps on weekdays by time interval", ylab="Number of steps")
 ```
