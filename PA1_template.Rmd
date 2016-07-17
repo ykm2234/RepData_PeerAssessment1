@@ -52,7 +52,7 @@ median_daily_steps<-median(total_step_by_day$'sum(steps)')
 median_daily_steps
 ```
 
-The average number of steps taken per day is 10766.19, and the median number of steps per day is `r median_daily_steps`.
+The average number of steps taken per day is 10766.19, and the median number of steps per day is 10765.
 
 ## What is the average daily activity pattern?
 1. First we group the data by interval 
@@ -75,7 +75,7 @@ max_steps_interval<-mean_steps_by_interval[max_steps_row,]$interval
 max_steps_interval
 ```
 
-The `r max_steps_interval` interval contains the maximum number of steps.
+The 835 interval contains the maximum number of steps.
 
 ## Imputing missing values
 
@@ -86,7 +86,7 @@ missing_data<-sum(is.na(activity_data$steps))
 missing_data
 ```
 
-The number of missing values is `r missing_data`.
+The number of missing values is 2304.
 
 2. I decided to replace the missing `NA`'s by the mean for the corresponding 5-minute interval. The  code below does this by looping through each observation in `activity_data`.
 3. It creates a new dataset `activity_data_impute` that is equal to the original dataset but with the missing data filled in.
